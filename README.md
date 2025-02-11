@@ -67,4 +67,7 @@ git checkout main
 
 19) se anotaron los pasos restantes (14-20) a este README
 
-20) 
+20) se hizo el último commit y finalmente push a origin con los siguientes comandos:
+git add README.md
+git commit -m "Agregados los pasos restantes a README.md"
+git push origin main

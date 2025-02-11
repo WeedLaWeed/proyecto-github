@@ -1,0 +1,13 @@
+1) Hash del primer commit: ebca21702bc640a3475df866b9afea54449f339d
+2) se decidió usar git reset porque reescribirá el historial de commits y no supone ningun problema. 
+Git reset reescribe el historial de commits, y git revert deshace los cambios hechos en un commit anterior 
+creando un commit completamente nuevo, lo que mantiene el historial de commits más ordenado y entendible. En
+este caso, con git reset, solo se deshace un commit, además de conservar los cambios hechos en los archivos 
+de dicho commit. Con git revert, no se conservan los cambios en los archivos hechos en ese commit.
+¿Entonces, por qué usar git reset en lugar de git revert?
+git reset --soft HEAD~1: Elimina el commit de forma más "directa" y mantiene los archivos tal como estaban, 
+listos para ser modificados o commitados nuevamente.
+git revert: Deshace los efectos del commit pero crea un nuevo commit de reversión, sin eliminar el commit original.
+Entonces, la clave está en que git reset elimina el commit y deja los archivos como estaban para volver a trabajar 
+con ellos. Mientras que git revert deja los archivos revertidos, pero mantiene la historia del proyecto intacta sin 
+cambiar el historial.
